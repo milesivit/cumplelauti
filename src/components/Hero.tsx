@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { CountdownBlock } from "./Countdown";
 
 export default function Hero() {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -26,6 +27,7 @@ export default function Hero() {
 
   return (
     <>
+      {/* PANTALLA INICIAL */}
       <div
         className={`fixed inset-0 bg-white z-50 flex items-center justify-center text-center px-4 transition-opacity duration-700 ${
           started ? "opacity-0 pointer-events-none" : "opacity-100"
@@ -37,9 +39,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-4xl mb-4 mt-6 tracking-[0.2em]"
-            style={{ fontFamily: "'Montserrat', sans-serif", color: "#1b4568" }}
+            style={{ fontFamily: "'Montserrat', sans-serif", color: "#8B5CF6" }}
           >
-            NATALIA & MATIAS
+            MIS XV AMANDA 
           </motion.h2>
 
           <motion.h6
@@ -47,9 +49,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl mb-6 max-w-xl mx-auto leading-relaxed"
-            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#1b4568" }}
+            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#8B5CF6" }}
           >
-            El amor nos trajo hasta acá y ahora queremos que seas parte de este momento inolvidable
+            Celebrar es mejor juntos.
           </motion.h6>
 
           <motion.button
@@ -58,26 +60,27 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.5 }}
             onClick={startExperience}
             className="px-8 py-3 rounded-full text-lg shadow-md hover:scale-105 transition"
-            style={{ backgroundColor: "#1b4568", color: "white" }}
+            style={{ backgroundColor: "#8B5CF6", color: "white" }}
           >
             VER INVITACIÓN
           </motion.button>
         </div>
       </div>
 
-      <section className="h-screen w-full flex items-center justify-center relative overflow-hidden transition-all duration-700">
+      {/* HERO */}
+      <section className="h-screen w-full flex items-center justify-center relative overflow-visible transition-all duration-700">
         
         {/* Fondo */}
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
           style={{
-            backgroundImage: "url('/parejaa.jpeg')",
+            backgroundImage: "url('/chica2.jpeg')",
             filter: started ? "blur(0px)" : "blur(8px)",
             transform: started ? "scale(1)" : "scale(1.05)",
           }}
         />
 
-        {/* Overlay oscuro */}
+        {/* Overlay */}
         <div
           className="absolute inset-0 transition-all duration-700"
           style={{
@@ -86,6 +89,56 @@ export default function Hero() {
               : "rgba(0,0,0,0.7)",
           }}
         />
+
+        <div className="relative z-10 flex flex-col items-center gap-2 text-center">
+          <h1
+            className="text-white text-4xl md:text-6xl"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            MIS 15
+          </h1>
+
+          <h1
+            className="text-white text-7xl md:text-6xl"
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+          >
+            Amanda
+          </h1>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: started ? 1 : 0 }}
+          transition={{ delay: 2, duration: 0.8 }}
+          className="absolute bottom-24 md:bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer"
+          onClick={() =>
+            window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+          }
+        >
+          <span
+            className="text-white text-sm mb-2"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            Deslizá para ver más
+          </span>
+
+          <motion.svg
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.2 }}
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </motion.svg>
+        </motion.div>
+
+        <div className="absolute -bottom-6 md:-bottom-20 left-1/2 -translate-x-1/2 z-20">
+          <CountdownBlock />
+        </div>
 
         {/* Música */}
         <audio ref={audioRef} src="/cancion.mp3" />

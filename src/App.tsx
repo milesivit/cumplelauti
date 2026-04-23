@@ -1,5 +1,5 @@
 import Hero from "./components/Hero";
-import { Countdown } from "./components/Countdown";
+// import { Countdown } from "./components/Countdown";
 import { DressCode } from "./components/DressCode";
 import { Honeymoon } from "./components/Honeymoon";
 import { Itinerary } from "./components/Initerario";
@@ -8,15 +8,19 @@ import { Asistencia } from "./components/Asistencia";
 import { Footer } from "./components/Footer";
 import { Frase } from "./components/frase";
 import { Instagram } from "./components/Instagram";
+import { Dia } from "./components/dia";
+import { Donde } from "./components/Donde";
 
 function App() {
   return (
     <>
       <Hero />
-      <Countdown />
+      {/* <Countdown /> */}
       <Frase />
-      <DressCode />
       <Instagram />
+      <Dia />
+      <Donde />
+      <DressCode />
       <Itinerary />
       <Information />
       <Honeymoon />

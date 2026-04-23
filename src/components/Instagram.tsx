@@ -1,45 +1,32 @@
 import { motion } from "framer-motion";
 
 export function Instagram() {
-    return (
-      <section className="py-10 text-center bg-[#1b4568]">
-        
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-            <img
-            src="/insta.webp"
-            className="mt-8 w-20 md:w-24 mx-auto"
-            />
-        </motion.div>
+  return (
+    <section className="py-12 text-center bg-[#8B5CF6]">
+      
+      <div className="mt-6 w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden bg-white flex items-center justify-center shadow-md">
+        <img
+          src="/camera.gif"
+          className="w-16 md:w-20 object-cover"
+        />
+      </div>
 
-        <h2
-          className="text-4xl md:text-4xl mb-2 mt-2"
-          style={{ fontFamily:  "'Montserrat', sans-serif", color: "#ffffff" }}
-        >
-          @bodanatiymati
-        </h2>
+      <h2
+        className="text-xl md:text-2xl mt-4 mb-3 px-4"
+        style={{ fontFamily: "'Montserrat', sans-serif", color: "#ffffff" }}
+      >
+        Subí tus momentos y etiquetalos
+      </h2>
 
-        <div className="w-24 h-[1px] bg-white mx-auto mb-12" />
-        
-  
-        <p
-          className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed"
-          style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#ffffff" }}
-        >
-            ¡Preparate para nuestro gran día!
-            <br />
-            Ya podés seguirnos en nuestra cuenta 
-            <br />
-            para ver todas las novedades del casamiento
-            <br />
-             y etiquetarnos en tus fotos y videos.
+      <div className="w-16 h-[2px] bg-[#ffffff] mx-auto mb-4 rounded-full" />
 
-        </p>
-  
-      </section>
-    );
-  }
+      <p
+        className="text-base md:text-lg text-white max-w-sm mx-auto leading-relaxed px-4"
+        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
+      >
+        con mi hashtag: <span className="font-semibold">#amandamisxv</span>
+      </p>
+
+    </section>
+  );
+}
