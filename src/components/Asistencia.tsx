@@ -1,6 +1,6 @@
 export function Asistencia() {
   return (
-    <section className="py-10 text-center bg-[#1b4568] ">
+    <section className="py-10 text-center bg-[#8B5CF6] ">
 
       <h2
         className="text-4xl md:text-3xl mb-4 mt-6"
@@ -13,24 +13,14 @@ export function Asistencia() {
       <div className="w-24 h-[1px] bg-white mx-auto mb-12" />
 
       <p
-        className="text-sm text-white max-w-md mx-auto leading-relaxed"
+        className="text-xl text-white max-w-md mx-auto leading-relaxed"
         style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
         Por favor <span className="font-semibold">confirma tu asistencia</span> 
         <br />
-        antes del <span className="font-semibold">primero de octubre</span>
+        antes del <span className="font-semibold">20 de julio.</span>
       </p>
-      <br />
-      <p
-        className="text-sm text-white max-w-md mx-auto leading-relaxed"
-        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
-      >
-        Si fuiste invitado/a con acompañante, 
-        <br />
-        <span className="text-red-400 font-semibold">completá un formulario por persona</span>.
-      </p>
-      {/* BOTÓN WHATSAPP */}
-      
+  
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSc4KMg4oK9QS_tHfwd_fi_peOY1aQ2PAJL49JbBKLFHoDDevA/viewform"
         target="_blank"

@@ -1,10 +1,20 @@
+import { motion } from "framer-motion";
+
 export function DressCode() {
   return (
     <section className="py-10 text-center bg-white">
+
+      <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-4"
+        >
       <img
         src="/dress.gif"
         className="mt-8 w-20 sm:w-25 md:w-30 mx-auto opacity-80"
       />
+      </motion.div>
 
       <h2
         className="text-4xl md:text-5xl mb-2 mt-3"
@@ -14,18 +24,16 @@ export function DressCode() {
       </h2>
 
       <p
-        className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed"
+        className="text-kl text-gray-600 max-w-md mx-auto leading-relaxed"
         style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#1b4568" }}
       >
         <br />
-        Te pedimos venir con un{" "}
-        <span className="font-semibold">accesorio violeta</span>{" "}
+        Te pedimos venir con un 
+        <span className="text-violet-600 font-medium"> accesorio violeta</span>
         <br />
         (puede ser una corbata, pulsera, moño, cartera 
         <br />
         o lo que prefieras).
-        <br /><br />
-        ¡Dejá volar tu estilo y sumate a la temática!
       </p>
     </section>
   );

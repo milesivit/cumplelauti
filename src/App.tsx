@@ -1,29 +1,27 @@
 import Hero from "./components/Hero";
-// import { Countdown } from "./components/Countdown";
 import { DressCode } from "./components/DressCode";
-import { Honeymoon } from "./components/Honeymoon";
 import { Itinerary } from "./components/Initerario";
-import { Information } from "./components/Menu";
 import { Asistencia } from "./components/Asistencia";
 import { Footer } from "./components/Footer";
-import { Frase } from "./components/frase";
+import { Frase } from "./components/Frase";
 import { Instagram } from "./components/Instagram";
-import { Dia } from "./components/dia";
+import { Dia } from "./components/Dia";
 import { Donde } from "./components/Donde";
+import { Foto } from "./components/Foto";
+import { FraseDos } from "./components/FraseDos";
 
 function App() {
   return (
     <>
       <Hero />
-      {/* <Countdown /> */}
       <Frase />
       <Instagram />
       <Dia />
       <Donde />
       <DressCode />
       <Itinerary />
-      <Information />
-      <Honeymoon />
+      <Foto />
+      <FraseDos />
       <Asistencia />
       <Footer />
     </>
