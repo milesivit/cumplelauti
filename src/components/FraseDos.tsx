@@ -12,18 +12,18 @@ export function FraseDos() {
           className="flex flex-col items-center gap-4"
         >
         {/* línea arriba */}
-        <div className="w-24 md:w-40 h-[1px] bg-violet-500" />
+        <div className="w-24 md:w-40 h-[1px] bg-black" />
 
         {/* texto */}
         <h2
           className="text-lg md:text-2xl text-center leading-relaxed"
-          style={{ fontFamily: "'Montserrat', sans-serif", color: "#8B5CF6" }}
+          style={{ fontFamily: "'Montserrat', sans-serif", color: "#000000" }}
         >
-          Una noche, mil recuerdos
+          Un día, una historia eterna
         </h2>
 
         {/* línea abajo */}
-        <div className="w-24 md:w-40 h-[1px] bg-violet-500" />
+        <div className="w-24 md:w-40 h-[1px] bg-black" />
 
         </motion.div>
 

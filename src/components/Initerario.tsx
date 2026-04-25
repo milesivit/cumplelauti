@@ -17,7 +17,7 @@ export function Itinerary() {
   }, [openPrices]);
   
   return (
-    <section className="py-20 bg-[#8B5CF6] flex justify-center px-4">
+    <section className="py-20 bg-gray-800 flex justify-center px-4">
 
       {/* CONTENEDOR CON MARCO */}
       <div className="relative w-full max-w-md px-6 py-12">
@@ -109,7 +109,7 @@ export function Itinerary() {
                   onClick={() => setOpenPrices(true)}
                   className="inline-flex items-center gap-2 bg-[#ffffff] px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition"
                 >
-                  <span className="text-[#8B5CF6] text-sm tracking-wide">
+                  <span className="text-gray-800 text-sm tracking-wide">
                     Ver precios
                   </span>
                 </button>
@@ -129,18 +129,18 @@ export function Itinerary() {
             {/* botón cerrar */}
             <button
               onClick={() => setOpenPrices(false)}
-              className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-[#8B5CF6] text-white hover:scale-110 transition"
+              className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 text-white hover:scale-110 transition"
             >
               ✕
             </button>
 
             {/* título */}
-            <h3 className="text-2xl mb-6 text-[#8B5CF6] tracking-[0.3em] font-light">
+            <h3 className="text-2xl mb-6 text-[#gray-800] tracking-[0.3em] font-light">
               PRECIOS
             </h3>
 
             {/* línea decorativa */}
-            <div className="w-16 h-[2px] bg-[#8B5CF6] mx-auto mb-6 opacity-60" />
+            <div className="w-16 h-[2px] bg-[#gray-800] mx-auto mb-6 opacity-60" />
 
             {/* contenido */}
             <div className="flex flex-col gap-8">
@@ -176,7 +176,7 @@ export function Itinerary() {
                   BRINDIS
                 </p>
 
-                <div className="bg-violet-500 text-white rounded-xl py-5 shadow-md">
+                <div className="bg-gray-800 text-white rounded-xl py-5 shadow-md">
                   <p className="text-xs tracking-widest opacity-80">
                     VALOR
                   </p>

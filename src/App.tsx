@@ -4,23 +4,21 @@ import { Itinerary } from "./components/Initerario";
 import { Asistencia } from "./components/Asistencia";
 import { Footer } from "./components/Footer";
 import { Frase } from "./components/Frase";
-import { Instagram } from "./components/Instagram";
-import { Dia } from "./components/Dia";
 import { Donde } from "./components/Donde";
-import { Foto } from "./components/Foto";
 import { FraseDos } from "./components/FraseDos";
+import { Countdown } from "./components/Countdown";
+import { Trivia } from "./components/Trivia";
 
 function App() {
   return (
     <>
       <Hero />
-      <Frase />
-      <Instagram />
-      <Dia />
+      <Countdown />
       <Donde />
+      <Frase />
+      <Trivia />
       <DressCode />
       <Itinerary />
-      <Foto />
       <FraseDos />
       <Asistencia />
       <Footer />

@@ -34,7 +34,7 @@ export function Donde() {
   };
 
   return (
-    <section className="py-12 text-center bg-[#8B5CF6]">
+    <section className="py-12 text-center bg-gray-800">
 
       <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -68,7 +68,7 @@ export function Donde() {
             onClick={() => setOpenMap("fiesta")}
             className="mt-3 inline-flex items-center gap-2 bg-[#ffffff] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
           >
-            <span className="text-[#8B5CF6] flex items-center gap-2 text-sm">
+            <span className="text-gray-800 flex items-center gap-2 text-sm">
               <LocationIcon />
               Cómo llegar
             </span>

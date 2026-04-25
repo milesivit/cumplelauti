@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-export function CountdownBlock() {
-  const weddingDate = new Date("2026-08-10T00:00:00");
+export function Countdown() {
+  const weddingDate = new Date("2026-07-10T00:00:00");
 
   const calculateTimeLeft = () => {
     const difference = +weddingDate - +new Date();
@@ -28,23 +29,65 @@ export function CountdownBlock() {
     return () => clearInterval(timer);
   }, []);
 
+  const primaryColor = "#000000"; 
+  const secondaryColor = "#808080";
+
   const Item = ({ value, label }: { value: number; label: string }) => (
-    <div className="bg-violet-500 rounded-md px-3 py-2 md:px-5 md:py-3 shadow-md">
-      <div className="text-2xl md:text-4xl font-semibold text-white tabular-nums">
+    <div className="flex flex-col items-center">
+      <span
+        className="text-4xl md:text-6xl font-light tabular-nums"
+        style={{ color: primaryColor }}
+      >
         {String(value).padStart(2, "0")}
-      </div>
-      <div className="text-[10px] md:text-xs tracking-widest text-white">
+      </span>
+
+      <span
+        className="text-xs md:text-sm tracking-[0.2em] mt-2"
+        style={{ color: secondaryColor }}
+      >
         {label}
-      </div>
+      </span>
     </div>
   );
 
   return (
-    <div className="flex gap-2 md:gap-4">
+    <section className="bg-white py-16 text-center">
+
+    <p
+      className="mt-10 mb-14 text-lg tracking-wide"
+      style={{ color: secondaryColor }}
+    >
+      El <span className="font-semibold" style={{ color: primaryColor }}>
+        10 de Julio de 2026
+      </span>{" "}
+      en
+    </p>
+
+    <div className="flex justify-center gap-6 md:gap-10">
       <Item value={timeLeft.days} label="DÍAS" />
-      <Item value={timeLeft.hours} label="HS" />
+      <Item value={timeLeft.hours} label="HORAS" />
       <Item value={timeLeft.minutes} label="MIN" />
       <Item value={timeLeft.seconds} label="SEG" />
     </div>
+
+    <p
+      className="mt-4 text-xl md:text-2xl tracking-[0.3em] font-medium"
+      style={{ color: primaryColor }}
+    >
+      Es mi gran noche  
+    </p>
+
+    <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-4"
+        >
+      <img
+        src="/disco.gif"
+        className="mt-8 w-20 md:w-24 mx-auto opacity-80"
+      />
+      </motion.div>
+    </section>
   );
 }
