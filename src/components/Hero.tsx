@@ -9,7 +9,7 @@ export default function Hero() {
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (!audioRef.current) return;
-  
+
       if (document.hidden) {
         audioRef.current.pause();
       } else {
@@ -18,9 +18,9 @@ export default function Hero() {
         }
       }
     };
-  
+
     document.addEventListener("visibilitychange", handleVisibilityChange);
-  
+
     return () => {
       document.removeEventListener(
         "visibilitychange",
@@ -48,42 +48,81 @@ export default function Hero() {
         }`}
       >
         <div>
+          {/* Título */}
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-widest"
+            className="
+              text-5xl
+              sm:text-4xl
+              md:text-5xl
+              lg:text-6xl
+              font-extrabold
+              tracking-widest
+              mb-3
+              px-2
+            "
             style={{
               fontFamily: "'Montserrat', sans-serif",
-              color: "#2563EB", 
+              color: "#2563EB",
+              textShadow: `
+                0 0 4px rgba(255,255,255,0.9),
+                0 0 12px rgba(37,99,235,0.45),
+                0 4px 10px rgba(0,0,0,0.15)
+              `,
             }}
           >
             BAUTISTA
           </motion.h2>
 
+          {/* Subtítulo */}
           <motion.h6
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg md:text-xl mb-6 max-w-xl mx-auto leading-relaxed"
+            className="
+              text-xl
+              md:text-xl
+              mb-8
+              max-w-xl
+              mx-auto
+              leading-relaxed
+              px-4
+            "
             style={{
               fontFamily: "'Roboto Flex', sans-serif",
-              color: "#60A5FA", 
+              color: "#60A5FA",
+              textShadow: "0 0 8px rgba(96,165,250,0.25)",
             }}
           >
             Prepárate para un cumpleaños a toda velocidad⚡
           </motion.h6>
 
+          {/* Botón */}
           <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
             onClick={startExperience}
-            className="px-8 py-3 rounded-full text-lg shadow-md hover:scale-105 transition"
+            className="
+              px-8
+              py-4
+              text-base
+              sm:text-lg
+              font-semibold
+              rounded-full
+              hover:scale-105
+              active:scale-95
+              transition
+            "
             style={{
               background: "#1E3A8A",
               color: "white",
-              boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)",
+              boxShadow: `
+                0 4px 15px rgba(30,58,138,0.35),
+                0 0 18px rgba(59,130,246,0.45)
+              `,
             }}
           >
             VER INVITACIÓN
@@ -92,7 +131,7 @@ export default function Hero() {
       </div>
 
       <section className="h-screen w-full flex items-center justify-center relative overflow-hidden transition-all duration-700">
-        
+
         {/* Fondo */}
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
@@ -103,7 +142,7 @@ export default function Hero() {
           }}
         />
 
-        {/* Overlay oscuro */}
+        {/* Overlay */}
         <div
           className="absolute inset-0 transition-all duration-700"
           style={{
@@ -113,18 +152,24 @@ export default function Hero() {
           }}
         />
 
-      <motion.div
+        {/* Scroll */}
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: started ? 1 : 0 }}
           transition={{ delay: 2, duration: 0.7 }}
           className="absolute bottom-24 md:bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer"
           onClick={() =>
-            window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+            window.scrollTo({
+              top: window.innerHeight,
+              behavior: "smooth",
+            })
           }
         >
           <span
             className="text-white text-sm mb-2"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+            }}
           >
             Deslizá para ver más
           </span>
@@ -139,17 +184,33 @@ export default function Hero() {
             stroke="currentColor"
             strokeWidth={2.5}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
           </motion.svg>
         </motion.div>
 
         {/* Música */}
         <audio ref={audioRef} src="/Sonic.mp3" />
 
-        {/* Botón sonido */}
+        {/* Sonido */}
         <button
           onClick={toggleMute}
-          className="fixed bottom-6 right-6 z-50 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-md hover:scale-110 transition"
+          className="
+            fixed
+            bottom-6
+            right-6
+            z-50
+            bg-white/80
+            backdrop-blur-md
+            p-3
+            rounded-full
+            shadow-md
+            hover:scale-110
+            transition
+          "
         >
           {isMuted ? "🔇" : "🔊"}
         </button>

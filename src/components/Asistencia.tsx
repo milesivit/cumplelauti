@@ -20,7 +20,7 @@ export function Asistencia() {
       </p>
   
       <a
-        href="https://wa.me/543463451602"
+        href="https://wa.me/543513485690"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#1b4568] bg-[#FAF7F2] text-[#1E3A8A] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
