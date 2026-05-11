@@ -57,14 +57,13 @@ export function Donde() {
         ¿DÓNDE?
       </h2>
 
-    {/* LINEA DECORATIVA */}
     <div className="w-16 h-[1px] bg-white/60 mx-auto mb-12" />
 
       <h2
         className="text-xl md:text-1xl mt-4 mb-3 px-4"
         style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#ffffff" }}
       >
-        Av. Armada Argentina 184
+        Salón Oki Doki
       </h2>
 
       <button
