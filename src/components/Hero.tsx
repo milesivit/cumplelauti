@@ -7,9 +7,25 @@ export default function Hero() {
   const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = started ? "auto" : "hidden";
+    const handleVisibilityChange = () => {
+      if (!audioRef.current) return;
+  
+      if (document.hidden) {
+        audioRef.current.pause();
+      } else {
+        if (started) {
+          audioRef.current.play().catch(() => {});
+        }
+      }
+    };
+  
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+  
     return () => {
-      document.body.style.overflow = "auto";
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+      );
     };
   }, [started]);
 
@@ -37,9 +53,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-widest"
-            style={{ fontFamily: "'Montserrat', sans-serif", color: "#808080" }}
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              color: "#2563EB", 
+            }}
           >
-            PAULA
+            BAUTISTA
           </motion.h2>
 
           <motion.h6
@@ -47,9 +66,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl mb-6 max-w-xl mx-auto leading-relaxed"
-            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#808080" }}
+            style={{
+              fontFamily: "'Roboto Flex', sans-serif",
+              color: "#60A5FA", 
+            }}
           >
-            Te invito a pasar este día especial conmigo
+            Prepárate para un cumpleaños a toda velocidad⚡
           </motion.h6>
 
           <motion.button
@@ -58,7 +80,11 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.5 }}
             onClick={startExperience}
             className="px-8 py-3 rounded-full text-lg shadow-md hover:scale-105 transition"
-            style={{ backgroundColor: "#000000", color: "white" }}
+            style={{
+              background: "#1E3A8A",
+              color: "white",
+              boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)",
+            }}
           >
             VER INVITACIÓN
           </motion.button>
@@ -71,7 +97,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
           style={{
-            backgroundImage: "url('/flyer.png')",
+            backgroundImage: "url('/fondo.png')",
             filter: started ? "blur(0px)" : "blur(8px)",
             transform: started ? "scale(1)" : "scale(1.05)",
           }}
@@ -82,8 +108,8 @@ export default function Hero() {
           className="absolute inset-0 transition-all duration-700"
           style={{
             backgroundColor: started
-              ? "rgba(0,0,0,0.4)"
-              : "rgba(0,0,0,0.7)",
+              ? "rgba(0,0,0,0.1)"
+              : "rgba(0,0,0,0.2)",
           }}
         />
 
@@ -118,7 +144,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Música */}
-        <audio ref={audioRef} src="/cancion.mp3" />
+        <audio ref={audioRef} src="/Sonic.mp3" />
 
         {/* Botón sonido */}
         <button

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export function Countdown() {
-  const weddingDate = new Date("2026-07-10T00:00:00");
+  const weddingDate = new Date("2026-05-30T00:00:00");
 
   const calculateTimeLeft = () => {
     const difference = +weddingDate - +new Date();
@@ -29,8 +29,8 @@ export function Countdown() {
     return () => clearInterval(timer);
   }, []);
 
-  const primaryColor = "#000000"; 
-  const secondaryColor = "#808080";
+  const primaryColor = "#1E3A8A"; 
+  const secondaryColor = "#60A5FA";
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
@@ -58,7 +58,7 @@ export function Countdown() {
       style={{ color: secondaryColor }}
     >
       El <span className="font-semibold" style={{ color: primaryColor }}>
-        10 de Julio de 2026
+        30 de mayo
       </span>{" "}
       en
     </p>
@@ -74,7 +74,7 @@ export function Countdown() {
       className="mt-4 text-xl md:text-2xl tracking-[0.3em] font-medium"
       style={{ color: primaryColor }}
     >
-      Es mi gran noche  
+      Es mi cumpleaños
     </p>
 
     <motion.div
@@ -84,7 +84,7 @@ export function Countdown() {
           className="flex flex-col items-center gap-4"
         >
       <img
-        src="/disco.gif"
+        src="/birthday.gif"
         className="mt-8 w-20 md:w-24 mx-auto opacity-80"
       />
       </motion.div>

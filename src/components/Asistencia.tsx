@@ -1,12 +1,12 @@
 export function Asistencia() {
   return (
-    <section className="py-10 text-center bg-gray-800 ">
+    <section className="py-10 text-center bg-blue-800 ">
 
       <h2
         className="text-4xl md:text-3xl mb-4 mt-6"
         style={{ fontFamily: "'Montserrat', sans-serif", color: "#ffffff" }}
       >
-        CONFIRMÁ TU ASISTENCIA
+        ¿VENDRÁS A MI CUMPLEAÑOS?
       </h2>
 
       {/* linea */}
@@ -16,19 +16,17 @@ export function Asistencia() {
         className="text-xl text-white max-w-md mx-auto leading-relaxed"
         style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
-        Por favor <span className="font-semibold">confirma tu asistencia</span> 
-        <br />
-        antes del <span className="font-semibold">20 de junio.</span>
+        ¡Me haría muy feliz verte ese día! 🤍
       </p>
   
       <a
-        href="https://wa.me/543463645091"
+        href="https://wa.me/543463451602"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#1b4568] bg-[#FAF7F2] text-[#000000] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
+        className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#1b4568] bg-[#FAF7F2] text-[#1E3A8A] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
         style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
-        Confirmar asistencia
+        Confirmar asistencia por WhatsApp
       </a>
 
     </section>

@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export function Frase() {
   return (
-    <section className="py-12 bg-white flex items-center justify-center">
-      <div className="flex flex-col items-center gap-4 w-full max-w-2xl px-6">
+    <section className="py-1 bg-white flex items-center justify-center">
+      <div className="flex flex-col items-center">
 
       <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -11,20 +11,21 @@ export function Frase() {
           viewport={{ once: true }}
           className="flex flex-col items-center gap-4"
         >
-        
-        {/* línea arriba */}
-        <div className="w-24 md:w-40 h-[1px] bg-gray-800" />
 
-        {/* texto */}
-        <h2
-          className="text-lg md:text-2xl text-center leading-relaxed"
-          style={{ fontFamily: "'Montserrat', sans-serif", color: "#000000" }}
-        >
-          Un momento único merece personas especiales.
-        </h2>
+        <img
+          src="/gifff.gif"
+          className="
+            mt-12
+            w-[100%]          /* mobile */
+            max-w-[460px]     /* mobile más grande */
+            sm:max-w-[500px]
+            md:max-w-[550px]
+            lg:max-w-[650px]
+            mx-auto
+            opacity-80
+          "
+        />
 
-        {/* línea abajo */}
-        <div className="w-24 md:w-40 h-[1px] bg-gray-800" />
 
         </motion.div>
 

@@ -33,15 +33,8 @@ export function Itinerary() {
             className="text-3xl md:text-4xl mb-4 tracking-[0.2em]"
             style={{ fontFamily: "'Montserrat', sans-serif", color: "#ffffff" }}
           >
-            INFORMACIÓN
+            HORARIO
           </h2>
-
-          <p
-            className="text-base md:text-base mb-12 opacity-90"
-            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#ffffff" }}
-          >
-            Horarios y precios
-          </p>
 
           {/* LINEA DECORATIVA */}
           <div className="w-16 h-[1px] bg-white/60 mx-auto mb-12" />
@@ -71,50 +64,6 @@ export function Itinerary() {
               <p className="text-3xl text-white font-light">
                 21:30
               </p>
-            </motion.div>
-
-            {/* divisor con punto */}
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-10 h-[1px] bg-white/40" />
-              <div className="w-2 h-2 rounded-full bg-white/60" />
-              <div className="w-10 h-[1px] bg-white/40" />
-            </div>
-
-            {/* BRINDIS */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center gap-4"
-            >
-            <div className="-mt-4 w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden bg-white flex items-center justify-center shadow-md">
-              <img
-                src="/alcohol.gif"
-                className="w-16 md:w-20 object-cover"
-              />
-            </div>
-
-
-              <p className="text-xs tracking-[0.4em] text-white mb-1">
-                BRINDIS
-              </p>
-
-
-              <p className="text-3xl text-white font-light">
-                01:30
-              </p>
-
-              <div className="mt-5 flex justify-center">
-                <button
-                  onClick={() => setOpenPrices(true)}
-                  className="inline-flex items-center gap-2 bg-[#ffffff] px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition"
-                >
-                  <span className="text-gray-800 text-sm tracking-wide">
-                    Ver precios
-                  </span>
-                </button>
-              </div>
-
             </motion.div>
 
           </div>
