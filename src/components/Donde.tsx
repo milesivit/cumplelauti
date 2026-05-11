@@ -64,6 +64,8 @@ export function Donde() {
         style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#ffffff" }}
       >
         Salón Oki Doki
+        <br />
+        (Av. Armada Argentina 184)
       </h2>
 
       <button
