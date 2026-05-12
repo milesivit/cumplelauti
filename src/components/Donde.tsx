@@ -30,11 +30,11 @@ export function Donde() {
 
   const maps = {  
     fiesta:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.629788421593!2d-64.2041277!3d-31.451857399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a251a846368d%3A0xecba209e8c2e55a2!2sAv.%20Armada%20Argentina%20184%2C%20X5016%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1778456751797!5m2!1ses-419!2sar",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.1891285854924!2d-62.880105730449934!3d-33.55970199833418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cf2c792aa53d35%3A0xecbe4b3e818437ea!2sMoreno%20523%2C%20X2650%20Canals%2C%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1778609258850!5m2!1sen!2sar",
   };
 
   return (
-    <section className="py-12 text-center bg-blue-800">
+    <section className="py-12 text-center bg-red-900">
 
       <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -63,9 +63,7 @@ export function Donde() {
         className="text-xl md:text-1xl mt-4 mb-3 px-4"
         style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#ffffff" }}
       >
-        Salón Oki Doki
-        <br />
-        (Av. Armada Argentina 184)
+        Moreno 563
       </h2>
 
       <button
@@ -75,7 +73,7 @@ export function Donde() {
           inline-flex items-center gap-2
           px-5 py-2.5
           rounded-full
-          border border-blue-300/30
+          border border-red-300/30
           bg-white
           backdrop-blur-sm
           shadow-md
@@ -84,7 +82,7 @@ export function Donde() {
           transition-all duration-300
         "
       >
-        <span className="text-blue-700 flex items-center gap-2 text-sm font-medium tracking-wide">
+        <span className="text-red-700 flex items-center gap-2 text-sm font-medium tracking-wide">
           <LocationIcon />
           Cómo llegar
         </span>

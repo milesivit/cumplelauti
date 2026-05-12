@@ -48,33 +48,6 @@ export default function Hero() {
         }`}
       >
         <div>
-          {/* Título */}
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="
-              text-5xl
-              sm:text-4xl
-              md:text-5xl
-              lg:text-6xl
-              font-extrabold
-              tracking-widest
-              mb-3
-              px-2
-            "
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              color: "#2563EB",
-              textShadow: `
-                0 0 4px rgba(255,255,255,0.9),
-                0 0 12px rgba(37,99,235,0.45),
-                0 4px 10px rgba(0,0,0,0.15)
-              `,
-            }}
-          >
-            BAUTISTA
-          </motion.h2>
 
           {/* Subtítulo */}
           <motion.h6
@@ -91,12 +64,12 @@ export default function Hero() {
               px-4
             "
             style={{
-              fontFamily: "'Roboto Flex', sans-serif",
-              color: "#60A5FA",
-              textShadow: "0 0 8px rgba(96,165,250,0.25)",
+              fontFamily: "'Cormorant Garamond', serif",
+              color: "#2F1B1B",
+              textShadow: "0 0 8px rgba(96,165,250  ,0.25)",
             }}
           >
-            Prepárate para un cumpleaños a toda velocidad⚡
+            Una noche única junto a quienes más quiero.
           </motion.h6>
 
           {/* Botón */}
@@ -117,7 +90,7 @@ export default function Hero() {
               transition
             "
             style={{
-              background: "#1E3A8A",
+              background: "#7F1D1D",
               color: "white",
               boxShadow: `
                 0 4px 15px rgba(30,58,138,0.35),
@@ -136,7 +109,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
           style={{
-            backgroundImage: "url('/fondo.png')",
+            backgroundImage: "url('/hero.png')",
             filter: started ? "blur(0px)" : "blur(8px)",
             transform: started ? "scale(1)" : "scale(1.05)",
           }}
@@ -193,7 +166,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Música */}
-        <audio ref={audioRef} src="/Sonic.mp3" />
+        <audio ref={audioRef} src="/cancion.mp3" />
 
         {/* Sonido */}
         <button

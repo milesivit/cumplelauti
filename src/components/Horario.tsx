@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function Horario() {
   return (
-    <section className="py-12 text-center bg-blue-800">
+    <section className="py-12 text-center bg-red-900">
 
       <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -32,7 +32,7 @@ export function Horario() {
         className="text-xl md:text-1xl mt-4 mb-3 px-4"
         style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#ffffff" }}
       >
-        19:00hs a 21:30hs
+        21:15hs
       </h2>
 
     </section>
